@@ -10,7 +10,7 @@
     "clean": "rm -rf lib/",
     "copy": "cp -r src/ lib/",
     "build": "npm run clean && npm run copy",
-    "publish": "npm publish --access public"
+    "publish:public": "npm publish --access public"
   },
   "repository": {
     "type": "git",
