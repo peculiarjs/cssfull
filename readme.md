@@ -1,10 +1,23 @@
+![version] ![MIT][license] ![last-commit]
+
+[version]: https://img.shields.io/npm/v/@peculiarjs/cssfull
+[license]: https://img.shields.io/badge/license-MIT-blue.svg
+[last-commit]: https://img.shields.io/github/last-commit/peculiarjs/cssfull
+
 # @peculiarjs/cssfull
 
-Minimalistic `css` library of simple **utilitarian** classes,
-focused on **positioning**, **sizing**, fast set-up and prototyping.
+
+Minimalistic `css` library of **utilitarian** classes,
+focused on **positioning**, **sizing** and extra goodies around it. Easy to set up and start prototyping blazingly fast ⚡
+
+## <a name="table-of-contents"></a> Table of Contents
+
+1. [What `cssfull` is](#what-is)
+2. [Classes naming approach](#naming)
+3. [Utils overview](#overview)
 
 
-## What `cssfull` is:
+## 1. <a name="what-is"></a>What `cssfull` is:
 * **`just css`** — simple bits of good, old `css`
 * **`lib, not a framework`** — it's here to be useful and not try to replace your current `styling` approach
 * **`minimalistic`** — up to 10 sm/md size `css` files
@@ -13,7 +26,7 @@ focused on **positioning**, **sizing**, fast set-up and prototyping.
 rather than a _swiss knife_ for all the cases in the modern frontend.
 
 
-## Classes naming approach
+## 2. <a name="naming"></a>Classes naming approach
 
 ### Shortenings
 
@@ -46,7 +59,7 @@ On the opposite, absolute values like `px`, need additional `px` ending:
 `mr-20px` means `margin-right: 20px`.
 
 
-## Utilities
+## 3. <a name="overview"></a>Utils overview
 
 Brief overview of the classes.
 
