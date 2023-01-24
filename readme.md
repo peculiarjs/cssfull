@@ -1,10 +1,10 @@
+# @peculiarjs/cssfull
+
 ![version] ![MIT][license] ![last-commit]
 
 [version]: https://img.shields.io/npm/v/@peculiarjs/cssfull
 [license]: https://img.shields.io/badge/license-MIT-blue.svg
 [last-commit]: https://img.shields.io/github/last-commit/peculiarjs/cssfull
-
-# @peculiarjs/cssfull
 
 
 Minimalistic `css` library of **utilitarian** classes,
