@@ -1,0 +1,6 @@
+.border-none {
+  border: none;
+}
+.border-debug {
+  border: 2px solid red;
+}

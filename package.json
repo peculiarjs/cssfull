@@ -1,0 +1,27 @@
+{
+  "name": "@peculiarjs/cssful",
+  "version": "0.0.0",
+  "description": "Minimalistic css library of classes, focused on positioning and sizing",
+  "main": "index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "clean": "rm -rf lib/",
+    "copy": "cp -r src/ lib/",
+    "build": "npm run clean && npm run copy",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peculiarjs/cssful.git"
+  },
+  "keywords": [
+    "css",
+    "utilities",
+    "utils",
+    "helpers"
+  ],
+  "author": "Eugene Chulkov <genechulkov@gmail>",
+  "license": "MIT"
+}
