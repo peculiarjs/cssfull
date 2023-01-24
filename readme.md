@@ -1,10 +1,10 @@
-# @peculiarjs/cssful
+# @peculiarjs/cssfull
 
 Minimalistic `css` library of simple **utilitarian** classes,
 focused on **positioning**, **sizing**, fast set-up and prototyping.
 
 
-## What `cssful` is:
+## What `cssfull` is:
 * **`just css`** — simple bits of good, old `css`
 * **`lib, not a framework`** — it's here to be useful and not try to replace your current `styling` approach
 * **`minimalistic`** — up to 10 sm/md size `css` files

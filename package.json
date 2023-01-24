@@ -1,5 +1,5 @@
 {
-  "name": "@peculiarjs/cssful",
+  "name": "@peculiarjs/cssfull",
   "version": "0.0.1",
   "description": "Minimalistic css library of classes, focused on positioning and sizing",
   "main": "index.js",
