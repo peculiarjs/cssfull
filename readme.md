@@ -12,9 +12,10 @@ focused on **positioning**, **sizing** and extra goodies around it. Easy to set 
 
 ## <a name="table-of-contents"></a> Table of Contents
 
-1. [What `cssfull` is](#what-is)
-2. [Classes naming approach](#naming)
-3. [Utils overview](#overview)
+* [What `cssfull` is](#what-is)
+* [Installation](#installation)
+* [Classes naming approach](#naming)
+* [Utils overview](#overview)
 
 
 ## 1. <a name="what-is"></a>What `cssfull` is:
@@ -25,8 +26,43 @@ focused on **positioning**, **sizing** and extra goodies around it. Easy to set 
 * **`focused`** — this project is focused around `positioning` and `sizing` helpers,
 rather than a _swiss knife_ for all the cases in the modern frontend.
 
+## 2. <a name="installation"></a>Installation
 
-## 2. <a name="naming"></a>Classes naming approach
+As `npm` package:
+```bash
+# npm
+npm install @peculiarjs/cssfull
+
+# pnpm
+pnpm add @peculiarjs/cssfull
+```
+After that you can import `index.css` or any specific file from the lib into
+your `app.js` and your `bundler` should do the rest:
+```jsx
+// app.js
+import { render } from 'preact'
+import { App } from './app'
+import '@peculiarjs/cssfull/lib/index.css'
+
+render(<App />, document.getElementById('app'))
+```
+
+Another way is to avoid `npm` package and simply
+inject it as `stylesheet` directly into `html`:
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/border.css">
+  <body>
+    <div class="border-debug">
+      Content 
+    </div>
+  </body>
+</html>
+```
+
+
+## 3. <a name="naming"></a>Classes naming approach
 
 ### Shortenings
 
@@ -59,7 +95,7 @@ On the opposite, absolute values like `px`, need additional `px` ending:
 `mr-20px` means `margin-right: 20px`.
 
 
-## 3. <a name="overview"></a>Utils overview
+## 4. <a name="overview"></a>Utils overview
 
 Brief overview of the classes.
 
