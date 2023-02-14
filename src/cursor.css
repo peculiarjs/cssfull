@@ -1,11 +1,9 @@
 .cursor-default {
   cursor: default;
 }
+.pointer,
 .cursor-pointer {
   cursor: pointer;
-}
-.cursor-auto {
-  cursor: auto;
 }
 .cursor-progress {
   cursor: progress;
