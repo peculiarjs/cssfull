@@ -41,8 +41,13 @@ your `app.js` and your `bundler` should do the rest:
 ```jsx
 // app.js
 import { render } from 'preact'
-import { App } from './app'
 import '@peculiarjs/cssfull/lib/index.css'
+
+const App = () => (
+  <div className="m-40 debug">
+    The Spot!
+  </div>
+)
 
 render(<App />, document.getElementById('app'))
 ```
@@ -54,7 +59,7 @@ inject it as `stylesheet` directly into `html`:
 <html lang="en">
   <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/border.css">
   <body>
-    <div class="border-debug">
+    <div class="border-debug pointer">
       Content 
     </div>
   </body>
