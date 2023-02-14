@@ -59,7 +59,7 @@ inject it as `stylesheet` directly into `html`:
 <html lang="en">
   <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/border.css">
   <body>
-    <div class="border-debug pointer">
+    <div class="debug pointer">
       Content 
     </div>
   </body>
