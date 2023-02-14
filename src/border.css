@@ -1,6 +1,7 @@
 .border-none {
   border: none;
 }
+.debug,
 .border-debug {
-  border: 2px solid red;
+  border: 2px dashed red;
 }

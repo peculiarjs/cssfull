@@ -41,8 +41,13 @@ your `app.js` and your `bundler` should do the rest:
 ```jsx
 // app.js
 import { render } from 'preact'
-import { App } from './app'
 import '@peculiarjs/cssfull/lib/index.css'
+
+const App = () => (
+  <div className="m-40 debug">
+    The Spot!
+  </div>
+)
 
 render(<App />, document.getElementById('app'))
 ```
@@ -54,7 +59,7 @@ inject it as `stylesheet` directly into `html`:
 <html lang="en">
   <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/border.css">
   <body>
-    <div class="border-debug">
+    <div class="border-debug pointer">
       Content 
     </div>
   </body>
@@ -63,6 +68,17 @@ inject it as `stylesheet` directly into `html`:
 
 
 ## 3. <a name="naming"></a>Classes naming approach
+
+### Measurement units
+Majority of classes in this lib approach 2 main `measurement units`:
+* `%`
+* `px`
+
+For simplicity `%` is made the default and used everywhere except `margin`,
+so class `w-100` should be read like `width: 100%` and `top-50` like `top: 50%`.
+On the opposite, absolute values like `px` are used **only** for `margin`, so
+in that case `mr-20` means `margin-right: 20px` and `m-10` means `margin: 10px`.
+
 
 ### Shortenings
 
@@ -80,19 +96,10 @@ so for a better and easier readability in `HTML/JSX`, these utils names are shor
 }
 
 /* "mt" stands for margin-top */
-.mt-20px {
+.mt-20 {
   margin-top: 20px;
 }
 ```
-
-### Measurement units
-Majority of classes in this lib approach 2 main `measurement units`:
-* `%`
-* `px`
-
-For simplicity `%` is made the default, so class `w-100` should be read like `width: 100%`.
-On the opposite, absolute values like `px`, need additional `px` ending:
-`mr-20px` means `margin-right: 20px`.
 
 
 ## 4. <a name="overview"></a>Utils overview
@@ -158,6 +165,7 @@ Same but for **height**.
 
 Pretty Similiar approach to `width` and `height` classes is used for `margins`.
 There are mnemonic for every margin side:
+* `m` — `margin`
 * `mt` — `margin-top`
 * `mr` — `margin-right`
 * `mb` — `margin-bottom`
@@ -171,23 +179,23 @@ with a step of `5px` from `20px` to `50px`.
 .mt-0 {
   margin-top: 0;
 }
-.mt-1px {
+.mt-1 {
   margin-top: 1px;
 }
-.mt-2px {
+.mt-2 {
   margin-top: 2px;
 }
 ...
 
-.mt-20px {
+.mt-20 {
   margin-top: 20px;
 }
-.mt-25px {
+.mt-25 {
   margin-top: 25px;
 }
 ...
 
-.mt-50px {
+.mt-50 {
   margin-top: 50px;
 }
 ```
