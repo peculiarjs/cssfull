@@ -76,14 +76,15 @@ Majority of classes in this lib approach 2 main `measurement units`:
 
 For simplicity `%` is made the default and used everywhere except `margin`,
 so class `w-100` should be read like `width: 100%` and `top-50` like `top: 50%`.
-On the opposite, absolute values like `px` are used **only** for `margin`, so
+On the opposite, absolute values like `px` are used **only** for `margin` or `padding`, so
 in that case `mr-20` means `margin-right: 20px` and `m-10` means `margin: 10px`.
 
 
 ### Shortenings
 
-It is **expected** that some utilities will be used **much more often**: `width`, `height`, `margins`
-so for a better and easier readability in `HTML/JSX`, these utils names are shortened and used as mnemonics:
+It is **expected** that some utilities will be used **much more often**: 
+`width`, `height`, `margin`, `padding`, so for a better and easier readability 
+in `HTML/JSX`, these utils names are shortened and used as mnemonics:
 ```css
 /* "w" stands for width */
 .w-100 {
@@ -98,6 +99,11 @@ so for a better and easier readability in `HTML/JSX`, these utils names are shor
 /* "mt" stands for margin-top */
 .mt-20 {
   margin-top: 20px;
+}
+
+/* "pr" stands for padding-right */
+.pr-20 {
+  padding-right: 20px;
 }
 ```
 
@@ -197,6 +203,45 @@ with a step of `5px` from `20px` to `50px`.
 
 .mt-50 {
   margin-top: 50px;
+}
+```
+
+### padding.css
+
+For `padding` is used the the same approach as for `margin`.
+Mnemonics:
+* `p` — `padding`
+* `pt` — `padding-top`
+* `pr` — `padding-right`
+* `pb` — `padding-bottom`
+* `pl` — `padding-left`
+
+So for every side classes go with a step of `1px` from `0` to `20px` and then 
+with a step of `5px` from `20px` to `50px`.
+
+```css
+/* right */ 
+.pr-0 {
+  padding-right: 0;
+}
+.pr-1 {
+  padding-right: 1px;
+}
+.pr-2 {
+  padding-right: 2px;
+}
+...
+
+.pr-20 {
+  padding-right: 20px;
+}
+.pr-25 {
+  padding-right: 25px;
+}
+...
+
+.pr-50 {
+  padding-right: 50px;
 }
 ```
 
