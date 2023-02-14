@@ -1,7 +1,18 @@
-.border-none {
+.debug {
+  border: 2px dashed red;
+}
+.no-border {
   border: none;
 }
-.debug,
-.border-debug {
-  border: 2px dashed red;
+.no-border-top {
+  border-top: none;
+}
+.no-border-right {
+  border-right: none;
+}
+.no-border-bottom {
+  border-bottom: none;
+}
+.no-border-left {
+  border-left: none;
 }
