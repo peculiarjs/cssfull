@@ -19,12 +19,12 @@ focused on **positioning**, **sizing** and extra goodies around it. Easy to set 
 
 
 ## 1. <a name="what-is"></a>What `cssfull` is:
-* **`just css`** — simple bits of good, old `css`
-* **`lib, not a framework`** — it's here to be useful and not try to replace your current `styling` approach
+* **`just css`** — simple bits of good old `css`
+* **`modular`** — use specific `module` or the whole `bundle`
 * **`minimalistic`** — up to 10 sm/md size `css` files
 * **`easy to setup`** — because it's plain `css`, it is easy to add to any project without hustle
-* **`focused`** — this project is focused around `positioning` and `sizing` helpers,
-rather than a _swiss knife_ for all the cases in the modern frontend.
+* **`focused`** — main goal is to provide helpers around `positioning` and `sizing` and not being a _swiss knife_ for everything
+* **`lib, not a framework`** — created to be used as addition to your current `styling` approach, not a replacement
 
 ## 2. <a name="installation"></a>Installation
 
@@ -58,6 +58,9 @@ inject it as `stylesheet` directly into `html`:
 <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/border.css">
+  <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/cursor.css">
+  <!-- or whole bundle.css can be linked — concatenated and minified version of the whole library -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/bundle.css">  -->
   <body>
     <div class="debug pointer">
       Content 
@@ -129,6 +132,31 @@ Everything around **flexbox** properties with simple naming.
 ...
 ```
 
+### position.css
+
+Main `positioning` helpers are created around: `relative`, `absolute`, `fixed`, `static` and `sticky` options. 
+Also there are helpers for every side `top`, `right`, `bottom`, `left` with 3 values `[0, 50%, 100%]` each.
+
+```css 
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+...
+
+.top-0 {
+  top: 0;
+}
+.top-50 {
+  top: 50%;
+}
+.top-100 {
+  top: 100%;
+}
+```
+
 ### width.css
 
 Set of classes for approaching elements **width** in `%`.
@@ -166,6 +194,23 @@ Same but for **height**.
   height: auto;
 }
 ```
+
+### display.css
+
+A `block/inline-block` pair.
+
+```css
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.hidden {
+  display: none;
+}
+```
+
 
 ### margin.css
 
@@ -245,27 +290,27 @@ with a step of `5px` from `20px` to `50px`.
 }
 ```
 
-### position.css
+### border.css
 
-Main `positioning` helpers are created around: `relative`, `absolute`, `fixed`, `static` and `sticky` options. 
-Also there are helpers for every side `top`, `right`, `bottom`, `left` with 3 values `[0, 50%, 100%]` each.
+`.debug` class for highlighting the needed part and some helpers around `no-border`:
 
-```css 
-.relative {
-  position: relative;
+```css
+.debug {
+  border: 2px dashed red;
 }
-.absolute {
-  position: absolute;
+.no-border {
+  border: none;
 }
-...
-
-.top-0 {
-  top: 0;
+.no-border-top {
+  border-top: none;
 }
-.top-50 {
-  top: 50%;
+.no-border-right {
+  border-right: none;
 }
-.top-100 {
-  top: 100%;
+.no-border-bottom {
+  border-bottom: none;
+}
+.no-border-left {
+  border-left: none;
 }
 ```
