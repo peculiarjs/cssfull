@@ -38,7 +38,7 @@ concat() {
   done
 }
 
-clean() {
+clear_unused() {
   FILE=$1
   touch $TEMP
 
@@ -67,7 +67,7 @@ minify() {
 
 create_bundle() {
   concat
-  clean $BUNDLE
+  clear_unused $BUNDLE
   minify $BUNDLE
 }
 
@@ -75,7 +75,7 @@ prepare_modules() {
   cp -r $SOURCE/* $OUTPUT_DIR
   for FILE in $OUTPUT/*; do
     if [[ $FILE != *"index.css" ]]; then
-      clean $FILE
+      clear_unused $FILE
       minify $FILE
     fi
   done
