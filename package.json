@@ -1,27 +1,29 @@
 {
   "name": "@peculiarjs/cssfull",
   "version": "0.0.2",
-  "description": "Minimalistic css library of classes, focused on positioning and sizing",
+  "description": "Minimalistic css library focused on positioning and sizing classes",
+  "author": "Eugene Chulkov <genechulkov@gmail>",
+  "license": "MIT",
   "main": "index.js",
   "files": [
     "lib/"
   ],
   "scripts": {
-    "clean": "rm -rf lib/",
-    "copy": "cp -r src/ lib/",
-    "build": "npm run clean && npm run copy",
+    "build": "./scripts/build.sh",
     "publish:public": "npm publish --access public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/peculiarjs/cssful.git"
   },
   "keywords": [
     "css",
+    "positioning",
+    "size",
+    "sizing",
+    "css library",
     "utilities",
     "utils",
     "helpers"
   ],
-  "author": "Eugene Chulkov <genechulkov@gmail>",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peculiarjs/cssfull.git"
+  }
 }
