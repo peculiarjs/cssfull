@@ -1,6 +1,6 @@
 {
   "name": "@peculiarjs/cssfull",
-  "version": "0.1.0-rc",
+  "version": "0.1.0",
   "description": "Minimalistic css library focused on positioning and sizing classes",
   "author": "Eugene Chulkov <genechulkov@gmail>",
   "license": "MIT",

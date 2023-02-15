@@ -83,10 +83,8 @@ prepare_modules() {
 
 main() {
   recreate_output_dir
-  create_bundle
   prepare_modules 
-
-  cat lib/bundle.css
+  create_bundle
 }
 
 main
