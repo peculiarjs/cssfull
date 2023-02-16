@@ -60,7 +60,7 @@ inject it as `stylesheet` directly into `html`:
   <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/border.css">
   <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/cursor.css">
   <!-- or whole bundle.css can be linked — concatenated and minified version of the whole library -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.0.2/lib/bundle.css">  -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/@peculiarjs/cssfull@0.1.0/lib/bundle.css">  -->
   <body>
     <div class="debug pointer">
       Content 
