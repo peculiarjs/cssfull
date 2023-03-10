@@ -81,10 +81,22 @@ prepare_modules() {
   done
 }
 
+check_correctness() {
+  for FILE in $OUTPUT/*; do
+    # checks if file is empty
+    if [[ $(wc -l < "${FILE}") -eq 0  ]]; then
+      echo "Build failed because ${FILE} output file is empty"
+      exit 1
+    fi
+  done
+
+}
+
 main() {
   recreate_output_dir
   prepare_modules 
   create_bundle
+  check_correctness
 }
 
 main
