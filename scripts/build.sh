@@ -61,7 +61,7 @@ minify() {
   # remove extra spaces around :
   sed -e "s/: /:/g" $TEMP | overwrite_file $TEMP
 
-  cat $TEMP | overwrite_file $FILE
+  cat $TEMP | tee $FILE >> /dev/null
   rm $TEMP
 }
 
@@ -84,18 +84,22 @@ prepare_modules() {
 check_correctness() {
   for FILE in $OUTPUT/*; do
     # checks if file is empty
-    if [[ $(wc -l < "${FILE}") -eq 0  ]]; then
+    if [[ $(wc -m < "${FILE}") -eq 0  ]]; then
       echo "Build failed because ${FILE} output file is empty"
       exit 1
     fi
   done
+}
 
+show_build_files() {
+  ls -l $OUTPUT_DIR
 }
 
 main() {
   recreate_output_dir
   prepare_modules 
   create_bundle
+  show_build_files
   check_correctness
 }
 
